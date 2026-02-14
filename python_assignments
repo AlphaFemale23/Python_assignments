@@ -1,1 +1,35 @@
+discount = 20   # global variable
 
+def display_product():
+    prod_id = 1001
+    prod_name = "Laptop Bag"
+    price = 500
+
+    total_price = price - (price * discount / 100)
+
+    print("Id:", prod_id)
+    print("Name:", prod_name)
+    print("Price:", price)
+    print("Price after discount:", total_price)
+
+def calculate_total(quantity):
+    price = 500
+    discounted_price = price - (price * discount / 100)
+    total = discounted_price * quantity
+    return total
+
+display_product()
+
+final_price = calculate_total(2)
+print("Total price for quantity:", final_price)
+
+
+
+Output
+
+Copy code
+Id: 1001
+Name: Laptop Bag
+Price: 500
+Price after discount: 400.0
+Total price for quantity: 800.0
